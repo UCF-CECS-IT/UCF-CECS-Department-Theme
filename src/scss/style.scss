@@ -21,4 +21,126 @@
 //
 
 // Add/import your theme's custom styles here
-// ...
+
+/*
+ * TABLE FORMATTING for scholarship page tables
+ */
+.table-mobile {
+  @include media-breakpoint-down(sm) {
+    th {
+      font-size: 0.7rem;
+    }
+
+    td {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.centered-rows {
+  th {
+    text-align: center;
+  }
+
+  td {
+    text-align: center;
+  }
+}
+
+/*
+ *
+ * GENERAL NAVBAR FIXES
+ *
+ */
+
+// Corrects Navbar breakage in IE, DO NOT change
+// .ie-wrap-fix {
+//   @include media-breakpoint-up(lg) {
+//       max-width: 100%;
+//       word-break: normal;
+//       white-space: pre-wrap;
+//   }
+// }
+
+// //
+// #sub-menu {
+//   @media (max-width: 1200px) and (min-width: 992px) {
+//       max-width: 100%;
+
+//       li {
+//           flex-shrink: 1;
+//           a {
+//               font-size: 0.6rem;
+//           }
+//       }
+//   }
+
+//   z-index: 3;
+// }
+
+// #sub-menu-nav {
+//   z-index: 3;
+
+//   li .nav-link {
+//       @include media-breakpoint-down(md) {
+//           color: white;
+//       }
+//   }
+// }
+
+// #top-header, #header-menu {
+//   z-index: 4;
+// }
+
+// .navbar-toggleable-md.navbar-light .navbar-nav .dropdown-item {
+//   @include media-breakpoint-down(md) {
+//       color: white;
+//   }
+// }
+
+// Forcing aspect ratio
+.aspect-ratio-box {
+  position: relative;
+}
+
+/* Create a pseudo element that uses padding-bottom to take up space */
+.aspect-ratio-box::after {
+  display: block;
+  content: "";
+  /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+}
+
+/* Image is positioned absolutely relative to the parent element */
+.aspect-ratio-box img {
+  /* Image should match parent box size */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.aspect-ratio-square {
+  position: relative;
+}
+
+/* Create a pseudo element that uses padding-bottom to take up space */
+.aspect-ratio-square::after {
+  display: block;
+  content: "";
+  /* 16:9 aspect ratio */
+  padding-bottom: 100%;
+}
+
+/* Image is positioned absolutely relative to the parent element */
+.aspect-ratio-square img {
+  /* Image should match parent box size */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
