@@ -22,6 +22,18 @@
 
 // Add/import your theme's custom styles here
 
+// Darkens the header gradient to improve readability
+.header-gradient {
+	background-image: linear-gradient(to bottom,rgba(0,0,0,1) 0, rgba(0,0,0,0.5) 65%, transparent 100%);
+}
+
+
+.box-shadow-sm {
+  -webkit-box-shadow: 0.1em 0.1em 0.5em rgb(0 0 0 / 33%);
+  box-shadow: 0.1em 0.1em 0.5em rgb(0 0 0 / 33%);
+}
+
+
 /*
  * TABLE FORMATTING for scholarship page tables
  */
