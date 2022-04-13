@@ -3,6 +3,7 @@ namespace Department\Theme;
 
 define( 'DEPARTMENT_THEME_DIR', trailingslashit( get_stylesheet_directory() ) );
 
+include DEPARTMENT_THEME_DIR . 'includes/activate.php';
 
 // Theme foundation
 include_once DEPARTMENT_THEME_DIR . 'includes/config.php';
