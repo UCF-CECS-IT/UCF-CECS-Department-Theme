@@ -53,7 +53,7 @@ function dept_post_list_display_newsroom($content, $posts, $atts)
                         <article class="ucf-post-list-item">
 							<div class="row">
 								<div class="col-md-6 col-xl-7 mb-3 mb-md-0 pr-lg-4">
-									<img src="<?php echo dept_get_newsroom_img_url($item); ?>" class="img-fluid" alt="<?php echo $item->post_title; ?>">
+									<img src="<?php echo dept_get_newsroom_img_url($item); ?>" class="w-100" alt="<?php echo $item->post_title; ?>">
 								</div>
 
 								<div class="col pt-lg-4">
@@ -79,7 +79,7 @@ function dept_post_list_display_newsroom($content, $posts, $atts)
                         <article class="ucf-post-list-item">
 
                                 <div class="aspect-ratio-box mb-3">
-                                    <img src="<?php echo dept_get_newsroom_img_url($item); ?>" class="img-fluid" alt="<?php echo $item->post_title; ?>">
+                                    <img src="<?php echo dept_get_newsroom_img_url($item); ?>" class="w-100" alt="<?php echo $item->post_title; ?>">
                                 </div>
 
 								<a class="text-secondary stretched-link text-decoration-none hover-text-underline" href="<?php echo get_permalink($item->ID); ?>">
