@@ -15,7 +15,7 @@ function enqueue_frontend_assets() {
 
 	wp_enqueue_style( 'style-child', DEPARTMENT_THEME_CSS_URL . '/style.min.css', array( 'style' ), $theme_version );
 
-	wp_enqueue_script( 'script-child', DEPARTMENT_THEME_JS_URL . '/script.min.js', array( 'jquery', 'script' ), $theme_version, true );
+	// wp_enqueue_script( 'script-child', DEPARTMENT_THEME_JS_URL . '/script.min.js', array( 'jquery', 'script' ), $theme_version, true );
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_frontend_assets', 11 );

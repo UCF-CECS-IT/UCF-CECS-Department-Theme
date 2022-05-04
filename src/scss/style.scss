@@ -32,21 +32,6 @@
   box-shadow: 0.1em 0.1em 0.5em rgb(0 0 0 / 33%);
 }
 
-/*
- * TABLE FORMATTING for scholarship page tables
- */
-.table-mobile {
-  @include media-breakpoint-down(sm) {
-    th {
-      font-size: 0.7rem;
-    }
-
-    td {
-      font-size: 0.7rem;
-    }
-  }
-}
-
 .centered-rows {
   th {
     text-align: center;
@@ -109,12 +94,12 @@
 // }
 
 // Forcing aspect ratio
-.aspect-ratio-box {
+.aspect-ratio-widescreen {
   position: relative;
 }
 
 /* Create a pseudo element that uses padding-bottom to take up space */
-.aspect-ratio-box::after {
+.aspect-ratio-widescreen::after {
   display: block;
   content: "";
   /* 16:9 aspect ratio */
@@ -122,7 +107,7 @@
 }
 
 /* Image is positioned absolutely relative to the parent element */
-.aspect-ratio-box img {
+.aspect-ratio-widescreen img {
   /* Image should match parent box size */
   position: absolute;
   left: 0;
@@ -153,4 +138,8 @@
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
+}
+
+.faculty-info-text {
+  font-size: 0.9rem !important;
 }
