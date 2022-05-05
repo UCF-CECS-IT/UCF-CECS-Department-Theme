@@ -88,13 +88,13 @@ if ( $bio ) {
 			<div class="col-3 ">
 				<nav class="nav nav-pills flex-column bg-faded mb-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 					<?php if ($bio) : ?>
-						<a class="nav-link <?php if ( $showBioTab ) { echo 'active'; } ?>" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="<?php if ( $showBioTab ) { echo 'true'; } else { echo 'false'; } ?>">Biography</a>
+						<a class="nav-link text-secondary <?php if ( $showBioTab ) { echo 'active'; } ?>" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="<?php if ( $showBioTab ) { echo 'true'; } else { echo 'false'; } ?>">Biography</a>
 					<?php endif; ?>
 					<?php if ($education) : ?>
 						<a class="nav-link text-secondary <?php if ( $showEducationTab ) { echo 'active'; } ?>" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="<?php if ( $showEducationTab ) { echo 'true'; } else { echo 'false'; } ?>">Education</a>
 					<?php endif; ?>
 					<?php if ($specialties) : ?>
-						<a class="nav-link <?php if ( $showSpecialtiesTab ) { echo 'active'; } ?>" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="<?php if ( $showSpecialtiesTab ) { echo 'true'; } else { echo 'false'; } ?>">Specialties</a>
+						<a class="nav-link text-secondary <?php if ( $showSpecialtiesTab ) { echo 'active'; } ?>" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="<?php if ( $showSpecialtiesTab ) { echo 'true'; } else { echo 'false'; } ?>">Specialties</a>
 					<?php endif; ?>
 				</nav>
 			</div>
