@@ -5,14 +5,16 @@ This is a basic child theme built for CECS Departments. The theme comes with the
 * `newsroom` Post List layout
 * `faculty` CPT
 * `faculty` Post List layout
+* Sidebar theme settings page and ACF field
+* Sidebar Selector page ACF field
 
-
+The Sidebar Selector checkbox options are dynamically generated with the `acf_load_sidebar_field_choices` filter to add in all sidebars entered in the Theme Settings > Sidebar page.
 
 Built as a child theme of the [UCF WordPress Theme](https://github.com/UCF/UCF-WordPress-Theme), using the [Athena Framework](https://ucf.github.io/Athena-Framework/).
 
 ## Quick links
 
-* [**Theme Documentation**](https://github.com/CECS-IT/UCF-CECS-Department-Theme/wiki)
+* [**Theme Documentation**](https://github.com/UCF-CECS-IT/UCF-CECS-Department-Theme/wiki)
 * [Development](#development)
 * [Contributing](#contributing)
 
@@ -20,7 +22,7 @@ Built as a child theme of the [UCF WordPress Theme](https://github.com/UCF/UCF-W
 
 ## Documentation
 
-Head over to the [CECS Department Theme wiki](https://github.com/CECS-IT/UCF-CECS-Department-Theme/wiki) for detailed information about this theme, installation instructions, and more.
+Head over to the [CECS Department Theme wiki](https://github.com/UCF-CECS-IT/UCF-CECS-Department-Theme/wiki) for detailed information about this theme, installation instructions, and more.
 
 -----
 
@@ -35,7 +37,7 @@ Note that compiled, minified css and js files are included within the repo.  Cha
 * gulp-cli
 
 ### Instructions
-1. Clone the UCF-CECS-Department-Theme repo into your local development environment, within your WordPress installation's `themes/` directory: `git clone https://github.com/CECS-IT/UCF-CECS-Department-Theme.git`
+1. Clone the UCF-CECS-Department-Theme repo into your local development environment, within your WordPress installation's `themes/` directory: `git clone https://github.com/UCF-CECS-IT/UCF-CECS-Department-Theme.git`
 2. `cd` into the new UCF-CECS-Department-Theme directory, and run `npm install` to install required packages for development into `node_modules/` within the repo
 3. Optional: If you'd like to enable [BrowserSync](https://browsersync.io) for local development, or make other changes to this project's default gulp configuration, copy `gulp-config.template.json`, make any desired changes, and save as `gulp-config.json`.
 
@@ -51,4 +53,4 @@ Note that compiled, minified css and js files are included within the repo.  Cha
 
 ## Contributing
 
-Want to submit a bug report or feature request?  Check out our [contributing guidelines](https://github.com/CECS-IT/UCF-CECS-Department-Theme/blob/master/CONTRIBUTING.md) for more information.  We'd love to hear from you!
+Want to submit a bug report or feature request?  Check out our [contributing guidelines](https://github.com/UCF-CECS-IT/UCF-CECS-Department-Theme/blob/master/CONTRIBUTING.md) for more information.  We'd love to hear from you!
