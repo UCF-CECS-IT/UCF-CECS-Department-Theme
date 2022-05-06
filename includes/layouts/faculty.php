@@ -5,9 +5,9 @@
  *
  * @since 1.0.0
  */
-if ( !function_exists( 'ucf_post_list_display_faculty_before' ) ) {
+if ( !function_exists( 'dept_post_list_display_faculty_before' ) ) {
 
-	function ucf_post_list_display_faculty_before( $content, $posts, $atts ) {
+	function dept_post_list_display_faculty_before( $content, $posts, $atts ) {
 		ob_start();
 	?>
 	<div class="ucf-post-list ucf-post-list-faculty" id="post-list-<?php echo $atts['list_id']; ?>">
@@ -15,13 +15,13 @@ if ( !function_exists( 'ucf_post_list_display_faculty_before' ) ) {
 		return ob_get_clean();
 	}
 
-	add_filter( 'ucf_post_list_display_faculty_before', 'ucf_post_list_display_faculty_before', 10, 3 );
+	add_filter( 'ucf_post_list_display_faculty_before', 'dept_post_list_display_faculty_before', 10, 3 );
 
 }
 
-if ( !function_exists( 'ucf_post_list_display_faculty_title' ) ) {
+if ( !function_exists( 'dept_post_list_display_faculty_title' ) ) {
 
-	function ucf_post_list_display_faculty_title( $content, $posts, $atts ) {
+	function dept_post_list_display_faculty_title( $content, $posts, $atts ) {
 		$formatted_title = '';
 
 		if ( $list_title = $atts['list_title'] ) {
@@ -31,13 +31,13 @@ if ( !function_exists( 'ucf_post_list_display_faculty_title' ) ) {
 		return $formatted_title;
 	}
 
-	add_filter( 'ucf_post_list_display_faculty_title', 'ucf_post_list_display_faculty_title', 10, 3 );
+	add_filter( 'ucf_post_list_display_faculty_title', 'dept_post_list_display_faculty_title', 10, 3 );
 
 }
 
-if ( !function_exists( 'ucf_post_list_display_faculty' ) ) {
+if ( !function_exists( 'dept_post_list_display_faculty' ) ) {
 
-	function ucf_post_list_display_faculty( $content, $posts, $atts ) {
+	function dept_post_list_display_faculty( $content, $posts, $atts ) {
 		if ( ! is_array( $posts ) && $posts !== false ) {
 			$posts = array( $posts );
 
@@ -97,13 +97,13 @@ if ( !function_exists( 'ucf_post_list_display_faculty' ) ) {
 		return ob_get_clean();
 	}
 
-	add_filter( 'ucf_post_list_display_faculty', 'ucf_post_list_display_faculty', 10, 3 );
+	add_filter( 'ucf_post_list_display_faculty', 'dept_post_list_display_faculty', 10, 3 );
 
 }
 
-if ( !function_exists( 'ucf_post_list_display_faculty_after' ) ) {
+if ( !function_exists( 'dept_post_list_display_faculty_after' ) ) {
 
-	function ucf_post_list_display_faculty_after( $content, $posts, $atts ) {
+	function dept_post_list_display_faculty_after( $content, $posts, $atts ) {
 		ob_start();
 	?>
 	</div>
@@ -111,6 +111,6 @@ if ( !function_exists( 'ucf_post_list_display_faculty_after' ) ) {
 		return ob_get_clean();
 	}
 
-	add_filter( 'ucf_post_list_faculty_default_after', 'ucf_post_list_faculty_default_after', 10, 3 );
+	add_filter( 'ucf_post_list_faculty_default_after', 'dept_post_list_faculty_default_after', 10, 3 );
 
 }

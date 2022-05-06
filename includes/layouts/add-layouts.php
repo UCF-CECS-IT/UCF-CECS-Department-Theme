@@ -9,6 +9,7 @@ function department_post_list_layouts( $layouts ) {
 
 	$layouts['faculty'] = 'Faculty Cards';
 	$layouts['newsroom'] = 'News layout for Newsroom page';
+	$layouts['directory'] = 'Staff & Faculty directory for Faculty and Person CPT';
 
 	return $layouts;
 }
