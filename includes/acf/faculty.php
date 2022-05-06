@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * This function adds the a version-controlled Faculty field to accompany
+ * the Faculty CPT
+ * @since 1.0.0
+ */
+
 if( function_exists('acf_add_local_field_group') ) {
 	acf_add_local_field_group(array(
 		'key' => 'group_627168dfb28f6',
