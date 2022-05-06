@@ -3,8 +3,13 @@
 get_header();
 the_post();
 
+/**
+ * Checks the page's sidebar selection checkbox results. These are dynamically
+ * populated based on the Theme Settings > Sidebar items.
+ */
 $sidebarSelector = get_field( 'sidebar_selector' );
 
+// Sidebar selections are matched against the sidebar items and added if found
 if ( $sidebarSelector ) {
 	$sidebars = get_field ( 'sidebars', 'option' );
 	$selected = [];

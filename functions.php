@@ -20,6 +20,7 @@ include DEPARTMENT_THEME_DIR . 'includes/layouts/faculty.php';
 include DEPARTMENT_THEME_DIR . 'includes/layouts/newsroom.php';
 
 include DEPARTMENT_THEME_DIR . 'includes/utilities/newsroom.php';
+include DEPARTMENT_THEME_DIR . 'includes/utilities/post.php';
 
 // Adds an ACF Options page to control page-specific sidebars
 if( function_exists('acf_add_options_page') ) {
