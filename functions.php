@@ -16,9 +16,11 @@ include DEPARTMENT_THEME_DIR . 'includes/acf/sidebar.php';
 include DEPARTMENT_THEME_DIR . 'includes/cpt/faculty.php';
 
 include DEPARTMENT_THEME_DIR . 'includes/layouts/add-layouts.php';
+include DEPARTMENT_THEME_DIR . 'includes/layouts/directory.php';
 include DEPARTMENT_THEME_DIR . 'includes/layouts/faculty.php';
 include DEPARTMENT_THEME_DIR . 'includes/layouts/newsroom.php';
 
+include DEPARTMENT_THEME_DIR . 'includes/utilities/directory.php';
 include DEPARTMENT_THEME_DIR . 'includes/utilities/newsroom.php';
 include DEPARTMENT_THEME_DIR . 'includes/utilities/post.php';
 

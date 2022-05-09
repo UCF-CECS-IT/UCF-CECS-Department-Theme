@@ -48,7 +48,7 @@ if ( !function_exists( 'dept_post_list_display_directory' ) ) {
 		<?php if ( $posts ): ?>
 			<table class="table table-hover font-size-sm">
 				<thead>
-					<tr>
+					<tr class="bg-primary">
 						<th>Name</th>
 						<th>Title</th>
 						<th>Phone</th>

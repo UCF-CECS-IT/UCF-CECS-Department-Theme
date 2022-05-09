@@ -21,22 +21,50 @@ if ( $sidebarSelector ) {
 	}
 }
 
+$subnavSelector = get_field( 'subnav_selector' );
+
+if ( $subnavSelector ) {
+	$parent = get_post_parent();
+	$args = array(
+		'post_type' 	 => 'page',
+		'posts_per_page' => 20,
+		'post_parent'    => $parent->ID,
+	);
+	$children = get_posts( $args );
+}
+
 ?>
 
 <div class="container mt-4 mb-5 pb-sm-4">
 
-	<?php if ( $sidebarSelector ): ?>
+	<?php if ( $sidebarSelector || $subnavSelector ): ?>
 		<div class="row">
 			<div class="col-lg-9">
 				<?php the_content(); ?>
 			</div>
 
 			<div class="col-lg-3">
-				<?php foreach( $selected as $sidebar): ?>
-					<div class="mb-4">
-						<?php echo $sidebar['content']; ?>
+				<?php if ( $subnavSelector ): ?>
+					<div class="list-group font-size-sm mb-4">
+						<!-- Parent  -->
+						<a class="text-center text-white bg-inverse-t-3 list-group-item list-group-item-action">
+							<h6 class="mb-0"><?php echo $parent->post_title; ?></h6>
+						</a>
+
+						<!-- children -->
+						<?php foreach( $children as $child ): ?>
+							<a class="bg-faded list-group-item list-group-item-action" href="<?php echo get_permalink( $child->ID ); ?>"><?php echo $child->post_title; ?></a>
+						<?php endforeach; ?>
 					</div>
-				<?php endforeach; ?>
+				<?php endif; ?>
+
+				<?php if ( $sidebarSelector ): ?>
+					<?php foreach( $selected as $sidebar): ?>
+						<div class="mb-4">
+							<?php echo $sidebar['content']; ?>
+						</div>
+					<?php endforeach; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	<?php else: ?>

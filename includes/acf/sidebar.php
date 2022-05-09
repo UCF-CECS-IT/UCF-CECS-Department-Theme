@@ -44,6 +44,25 @@ if( function_exists('acf_add_local_field_group') ):
 		'title' => 'Sidebar Selector',
 		'fields' => array(
 			array(
+				'key' => 'field_627950792fa2a',
+				'label' => 'Sub-navigation Box',
+				'name' => 'subnav_selector',
+				'type' => 'true_false',
+				'instructions' => 'This box will display links to the post selected as Page Attribute > Parent and all other sibling posts.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
 				'key' => 'field_627411dfe30b6',
 				'label' => 'Sidebar(s)',
 				'name' => 'sidebar_selector',
