@@ -4,6 +4,12 @@ get_header();
 the_post();
 
 /**
+ * Preserve content, sidebar loading may reset the global WP_Query if it
+ * contains certain shortcodes, like [ucf-post-list]
+ */
+$content = get_the_content();
+
+/**
  * Checks the post's sidebar selection checkbox results. These are dynamically
  * populated based on the Theme Settings > Sidebar items.
  */
@@ -28,7 +34,7 @@ if ( $sidebarSelector ) {
 	<?php if ( $sidebarSelector ): ?>
 		<div class="row">
 			<div class="col-lg-9">
-				<?php the_content(); ?>
+				<?php echo $content; ?>
 			</div>
 
 			<div class="col-lg-3">
@@ -40,7 +46,7 @@ if ( $sidebarSelector ) {
 			</div>
 		</div>
 	<?php else: ?>
-		<?php the_content(); ?>
+		<?php echo $content; ?>
 	<?php endif; ?>
 
 </div>

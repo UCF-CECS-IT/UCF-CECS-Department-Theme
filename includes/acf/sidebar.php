@@ -16,10 +16,12 @@ function acf_load_sidebar_field_choices( $field ) {
 
 	$sidebars = get_field( 'sidebars', 'option' );
 
-    foreach( $sidebars as $sidebar ) {
-		$name = $sidebar['name'];
-		$field['choices'][ $name ] = $name;
-  	}
+	if ( $sidebars ) {
+		foreach( $sidebars as $sidebar ) {
+			$name = $sidebar['name'];
+			$field['choices'][ $name ] = $name;
+		  }
+	}
 
     // return the field
     return $field;

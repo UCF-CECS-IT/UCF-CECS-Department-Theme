@@ -5,6 +5,7 @@ This is a basic child theme built for CECS Departments. The theme comes with the
 * `newsroom` Post List layout
 * `faculty` CPT
 * `faculty` Post List layout
+* `directory` Post List layout
 * Sidebar theme settings page and ACF field
 * Sidebar Selector page ACF field
 
