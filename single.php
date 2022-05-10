@@ -8,6 +8,7 @@ the_post();
  * contains certain shortcodes, like [ucf-post-list]
  */
 $content = get_the_content();
+$content = apply_filters( 'the_content', $content );
 
 /**
  * Checks the post's sidebar selection checkbox results. These are dynamically
