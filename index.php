@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+
+get_header();
+
+?>
 
 <div class="container mt-4 mb-5 pb-sm-4">
 	<?php if ( have_posts() ): ?>

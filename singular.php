@@ -36,6 +36,7 @@ if ( $subnavSelector ) {
 		'post_type' 	 => 'page',
 		'posts_per_page' => 20,
 		'post_parent'    => $parent->ID,
+		'orderby'		 => 'menu_order',
 	);
 	$children = get_posts( $args );
 }
