@@ -21,6 +21,7 @@ include DEPARTMENT_THEME_DIR . 'includes/layouts/faculty.php';
 include DEPARTMENT_THEME_DIR . 'includes/layouts/newsroom.php';
 
 include DEPARTMENT_THEME_DIR . 'includes/utilities/directory.php';
+include DEPARTMENT_THEME_DIR . 'includes/utilities/faculty.php';
 include DEPARTMENT_THEME_DIR . 'includes/utilities/newsroom.php';
 include DEPARTMENT_THEME_DIR . 'includes/utilities/post.php';
 

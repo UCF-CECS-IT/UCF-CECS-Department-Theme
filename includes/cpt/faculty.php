@@ -15,7 +15,7 @@ function faculty_post_type() {
 	);
 	$args = array(
 		'label'                 => __( 'Faculty', 'text_domain' ),
-		'taxonomies' 			=> array( 'letter' ),
+		'taxonomies' 			=> array( 'letter', 'faculty-category' ),
 		'labels'                => $labels,
 		'menu_position'     	=> 5,
 		'public'            	=> true,
@@ -48,9 +48,33 @@ function faculty_post_type() {
 
 	register_taxonomy('expertise', 'faculty', $expertiseArgs);
 
+	$categoryLabels = array(
+		'name'                          => 'Faculty Category',
+        'all_items'                     => 'All Faculty Categories',
+        'edit_item'                     => 'Edit Faculty Category',
+        'view_item'                     => 'View Faculty Category',
+        'update_item'                   => 'Update Faculty Category',
+        'add_new_item'                  => 'Add new Faculty Category',
+        'new_item_name'                 => 'New Faculty Category',
+        'search_items'                  => 'Search Faculty Category',
+        'popular_items'                 => 'Common Faculty Categories',
+        'separate_items_with_commas'    => 'Separate Faculty Categories with commas',
+        'add_or_remove_items'           => 'Add or remove Faculty Category',
+        'choose_from_most_used'         => 'Choose from common Faculty Category',
+        'not_found'                     => 'No Faculty Categories found'
+	);
+
+	$categoryArgs = array(
+		'hierarchical'          => true,
+		'labels'                => $categoryLabels,
+		'show_admin_column' => true
+	);
+
+	register_taxonomy('faculty-category', 'faculty', $categoryArgs);
+
 	$letterArgs = [
 		'labels'            => array(
-			'name'                          => 'Letter',
+			'name'          => 'Letter',
 		),
 		'show_admin_column' => false,
 		'show_ui'           => false,
