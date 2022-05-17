@@ -52,9 +52,12 @@ function dept_post_list_display_faculty( $content, $items, $atts ) {
 	<?php if ( $items ): ?>
 	<ul class="list-unstyled row ucf-post-list-items">
 		<?php
+
+		uasort($items, "sort_faculty_posts");
+
 		foreach ( $items as $item ):
 
-			$thumbnail = get_field( 'faculty_headshot', $item->ID ) ?: DEPARTMENT_THEME_IMG_URL . '/faculty-fallback.jpg';
+			$thumbnail = get_field( 'faculty_headshot', $item->ID ) ?: DEPARTMENT_THEME_IMG_URL . '/pegasus.jpg';
 			$name = get_field( 'faculty_first_name', $item->ID ) . ' ' . get_field( 'faculty_last_name', $item->ID );
 			$position = get_field( 'faculty_position', $item->ID );
 			$email = get_field( 'faculty_email', $item->ID );
@@ -64,7 +67,7 @@ function dept_post_list_display_faculty( $content, $items, $atts ) {
 			<li class="col-6 col-sm-4 col-md-3 col-xl-2 mt-3 mb-2 ucf-post-list-item">
 
 				<a class="person-link" href="<?php echo get_permalink( $item->ID ); ?>">
-					<div class="media-background-container person-photo mx-auto">
+					<div class="media-background-container person-photo mx-auto rounded">
 						<img src="<?php echo $thumbnail; ?>" alt="" class="media-background object-fit-cover">
 					</div>
 					<strong class="my-2 d-block person-name">

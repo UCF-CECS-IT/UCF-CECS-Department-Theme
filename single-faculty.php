@@ -3,7 +3,7 @@
 get_header();
 the_post();
 
-$headshot = get_field('faculty_headshot') ?: DEPARTMENT_THEME_IMG_URL . '/faculty-fallback.jpg';
+$headshot = get_field('faculty_headshot') ?: DEPARTMENT_THEME_IMG_URL . '/pegasus.jpg';
 $name = get_field('faculty_first_name') . ' ' . get_field('faculty_last_name');
 $position = get_field('faculty_position');
 $office = get_field('faculty_office');
